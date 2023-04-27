@@ -1,14 +1,19 @@
-import { Admin, Resource } from 'react-admin';
 import React from 'react';
-import jsonServerProvider from 'ra-data-json-server';
-import { UserList } from './pages/UserList/UserList';
+import { Route, Routes } from 'react-router-dom';
+import { Global, ThemeProvider } from '@emotion/react';
+import { defaultTheme } from './app/styles/themes/defaultTheme';
+import { globalStyles } from './app/styles/globalStyles';
+import { MainPage } from './pages/MainPage/MainPage';
 
-const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 export const App = () => {
+
     return (
-        <Admin dataProvider={ dataProvider }>
-            <Resource name={ 'users' } list={ UserList } />
-        </Admin>
+        <ThemeProvider theme={ defaultTheme }>
+            <Global styles={ globalStyles } />
+            <Routes>
+                <Route path={ '' } element={ <MainPage /> } />
+            </Routes>
+        </ThemeProvider>
     );
 };
 
