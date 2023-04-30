@@ -1,8 +1,8 @@
-import { styled } from '@stitches/react';
+import { styled } from '../styles/stitches.config';
 
 export const SLayout = styled('div', {
-    bg: '$primaryMain',
-    '@lg': {
+    '@md': {
         h: '100vh'
-    }
+    },
+    bc: '$primaryMain'
 });

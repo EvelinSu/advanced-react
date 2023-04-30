@@ -1,4 +1,4 @@
-import { globalCss } from '@stitches/react';
+import { globalCss } from './stitches.config';
 
 export const globalStyles = globalCss({
     '*': {
@@ -6,12 +6,18 @@ export const globalStyles = globalCss({
         padding: 0,
         margin: 0
     },
-    'html, body': {
-        maxWidth: '100vw',
-        overflowX: 'hidden'
-    },
     'a': {
         color: 'inherit',
         textDecoration: 'none'
+    },
+    html: {
+        scrollBehavior: 'smooth'
+    },
+    body: {
+        size: '100%',
+        fontFamily: 'Roboto Mono, monospace',
+        overflowX: 'hidden',
+        background: '$primaryMain',
+        color: '$primaryContrast'
     }
 });
