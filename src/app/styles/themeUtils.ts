@@ -1,16 +1,15 @@
 import { lightTheme } from './themes/light';
-import { darkTheme } from './themes/dark';
-import { theme } from './stitches.config';
+import { defaultTheme } from './themes/default';
 
-export type Themes = 'light' | 'dark'
+declare module '@emotion/react' {
+    export interface Theme extends ThemeType {}
+}
 
-export type ThemeType = Partial<typeof theme>
+export type Themes = 'light' | 'default'
+
+export type ThemeType = typeof defaultTheme
 
 export const themes: Record<Themes, ThemeType> = {
     light: lightTheme,
-    dark: darkTheme
-};
-
-export const getTheme = (key: Themes) => {
-    return themes[key];
+    default: defaultTheme
 };

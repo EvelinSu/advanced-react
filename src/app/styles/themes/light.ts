@@ -1,8 +1,11 @@
-import { createTheme } from '../stitches.config';
+import { defaultTheme } from './default';
 
-export const lightTheme = createTheme('light-theme', {
-    colors: {
-        primaryMain: '#161616',
-        primaryContrast: '#ffffff'
+export const lightTheme = {
+    ...defaultTheme,
+    palette: {
+        primary: {
+            main: '#ffffff',
+            contrast: '#000000'
+        }
     }
-});
+};

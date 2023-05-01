@@ -1,11 +1,6 @@
-import { styled } from '../styles/stitches.config';
+import styled from '@emotion/styled';
 
-export const SLayout = styled('div', {
-    fd: 'column',
-    h: '100vh',
-    bc: '$primaryMain',
-
-    '@md': {
-        h: '100vh'
-    }
-});
+export const SLayout = styled.div(({ theme }) => ({
+    flexDirection: 'column',
+    height: '100vh'
+}));

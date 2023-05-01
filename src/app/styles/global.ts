@@ -1,6 +1,7 @@
-import { globalCss } from './stitches.config';
+import { css } from '@emotion/react';
+import { ThemeType } from './themeUtils';
 
-export const globalStyles = globalCss({
+export const globalStyles = (theme: ThemeType) => css({
     '*': {
         boxSizing: 'border-box',
         padding: 0,
@@ -17,10 +18,10 @@ export const globalStyles = globalCss({
     },
     body: {
         size: '100%',
-        fontFamily: '"Consolas", sans-serif',
-        fontSize: 16,
+        fontFamily: theme.fonts.display,
+        fontSize: theme.fontSizes.md,
         overflowX: 'hidden',
-        background: '$primaryMain',
-        color: '$primaryContrast'
+        background: theme.palette.primary.main,
+        color: theme.palette.primary.contrast
     }
 });
