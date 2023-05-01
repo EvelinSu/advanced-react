@@ -1,4 +1,7 @@
 import { createStitches, ScaleValue } from '@stitches/react';
+import { Property } from '@stitches/react/types/css';
+import FlexDirection = Property.FlexDirection;
+import AlignItems = Property.AlignItems;
 
 export const {
     styled,
@@ -94,8 +97,17 @@ export const {
         }),
         bc: (value: ScaleValue<'colors'>) => ({
             backgroundColor: value
+        }),
+        h: (value: string) => ({
+            height: value
+        }),
+        fd: (value: FlexDirection) => ({
+            display: 'flex',
+            flexDirection: value
+        }),
+        fa: (value: AlignItems) => ({
+            display: 'flex',
+            alignItems: value
         })
     }
 });
-
-export type ThemeType = Partial<typeof theme>
