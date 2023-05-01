@@ -3,7 +3,7 @@ import { styled } from '@stitches/react';
 
 export default () => {
     return (
-        <Text>text</Text>
+        <Text>About page</Text>
     );
 };
 

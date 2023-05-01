@@ -4,7 +4,9 @@ export const globalStyles = globalCss({
     '*': {
         boxSizing: 'border-box',
         padding: 0,
-        margin: 0
+        margin: 0,
+        fontSize: 'inherit',
+        font: 'inherit'
     },
     'a': {
         color: 'inherit',
@@ -15,7 +17,8 @@ export const globalStyles = globalCss({
     },
     body: {
         size: '100%',
-        fontFamily: 'Roboto Mono, monospace',
+        fontFamily: '"Consolas", sans-serif',
+        fontSize: 16,
         overflowX: 'hidden',
         background: '$primaryMain',
         color: '$primaryContrast'

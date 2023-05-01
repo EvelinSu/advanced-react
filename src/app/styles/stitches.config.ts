@@ -10,13 +10,6 @@ export const {
     createTheme,
     config
 } = createStitches({
-    media: {
-        sm: '(min-width: 425px)',
-        md: '(min-width: 768px)',
-        lg: '(min-width: 1024px)',
-        xl: '(min-width: 1440px)',
-        xxl: '(min-width: 1600px)'
-    },
     theme: {
         colors: {
             primaryMain: '#161616',
@@ -52,6 +45,13 @@ export const {
             modal: 40,
             alwaysOnTop: 50
         }
+    },
+    media: {
+        sm: '(min-width: 425px)',
+        md: '(min-width: 768px)',
+        lg: '(min-width: 1024px)',
+        xl: '(min-width: 1440px)',
+        xxl: '(min-width: 1600px)'
     },
     utils: {
         m: (value: ScaleValue<'spaces'> | string) => ({
@@ -97,3 +97,5 @@ export const {
         })
     }
 });
+
+export type ThemeType = Partial<typeof theme>
