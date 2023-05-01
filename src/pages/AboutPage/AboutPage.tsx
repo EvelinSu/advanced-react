@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@stitches/react';
 
-export const AboutPage = () => {
+export default () => {
     return (
         <Text>text</Text>
     );
