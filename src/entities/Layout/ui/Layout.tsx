@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { SLayout } from './styles';
-import { StyleContext } from '../providers/style/StyleContext';
+import { StyleContext } from 'app/providers/StyleProvider/lib/StyleContext';
 
 type PropsType = {
     children: React.ReactNode,

@@ -1,8 +1,8 @@
 import { Global, ThemeProvider as EmotionProvider } from '@emotion/react';
-import { globalStyles } from '../../styles/global';
 import React, { useMemo, useState } from 'react';
-import { LOCAL_STORAGE_THEME_KEY, StyleContext, themes } from './StyleContext';
-import { Themes } from '../../styles/themeUtils';
+import { LOCAL_STORAGE_THEME_KEY, StyleContext, themes } from '../lib/StyleContext';
+import { Themes } from 'app/providers/StyleProvider/lib/themeUtils';
+import { globalStyles } from 'app/styles/global';
 
 const currentThemeKey = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Themes || 'default';
 

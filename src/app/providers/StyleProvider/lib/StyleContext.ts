@@ -1,6 +1,6 @@
-import { lightTheme } from '../../styles/themes/light';
-import { defaultTheme } from '../../styles/themes/default';
-import { Themes, ThemeType } from '../../styles/themeUtils';
+import { lightTheme } from 'app/styles/themes/light';
+import { defaultTheme } from 'app/styles/themes/default';
+import { Themes, ThemeType } from '../lib/themeUtils';
 import { createContext } from 'react';
 
 export const themes: Record<Themes, ThemeType> = {

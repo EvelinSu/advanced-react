@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { Layout } from './app/Layout/Layout';
-import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
-import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
-import { StyleProvider } from './app/providers/style/StyleProvider';
+import { Layout } from 'entities/Layout';
+import { AboutPageLazy } from 'pages/AboutPage/AboutPage.lazy';
+import { MainPageLazy } from 'pages/MainPage/MainPage.lazy';
+import { StyleProvider } from 'app/providers/StyleProvider';
 
 export const App = () => {
 
