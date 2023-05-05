@@ -9,10 +9,10 @@ export const themes: Record<Themes, ThemeType> = {
 };
 
 export type ThemeContextPropsType = {
-    theme?: Themes;
-    setTheme?: (theme: Themes) => void
+    themeKey?: Themes;
+    setThemeKey?: (theme: Themes) => void
 }
 
 export const StyleContext = createContext<ThemeContextPropsType>({});
 
-export const LOCAL_STORAGE_THEME_KEY = 'theme';
+export const LOCAL_STORAGE_THEME_KEY = 'levita-admin-theme';

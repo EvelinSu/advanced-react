@@ -4,27 +4,29 @@ import React, { useMemo, useState } from 'react';
 import { LOCAL_STORAGE_THEME_KEY, StyleContext, themes } from './StyleContext';
 import { Themes } from '../../styles/themeUtils';
 
-const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Themes || 'default';
+const currentThemeKey = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Themes || 'default';
 
 type PropsType = {
     children: React.ReactNode
 }
 export const StyleProvider = ({ children }: PropsType) => {
-    const [theme, setTheme] = useState<Themes>(defaultTheme);
+    const [themeKey, setThemeKey] = useState<Themes>(currentThemeKey);
+
+    const getCurrentTheme = themes[themeKey] || themes['default'];
 
     const changeTheme = (theme: Themes) => {
-        setTheme(theme);
+        setThemeKey(theme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
     };
 
     const defaultProps = useMemo(() => ({
-        theme, setTheme: changeTheme
-    }), [theme]);
+        themeKey, setThemeKey: changeTheme
+    }), [themeKey]);
 
     return (
-        <EmotionProvider theme={ themes[theme] }>
+        <EmotionProvider theme={ getCurrentTheme }>
             <StyleContext.Provider value={ defaultProps }>
-                <Global styles={ globalStyles(themes[theme]) } />
+                <Global styles={ globalStyles(getCurrentTheme) } />
                 { children }
             </StyleContext.Provider>
         </EmotionProvider>

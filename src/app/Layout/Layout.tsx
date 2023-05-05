@@ -7,10 +7,10 @@ type PropsType = {
 }
 
 export const Layout = ({ children }: PropsType) => {
-    const { theme, setTheme } = useContext(StyleContext);
+    const { themeKey, setThemeKey } = useContext(StyleContext);
 
     const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'default' : 'light');
+        setThemeKey(themeKey === 'default' ? 'light' : 'default');
     };
 
     return (
