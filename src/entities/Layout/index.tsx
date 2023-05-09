@@ -1,3 +1,1 @@
-import { Layout } from './ui/Layout';
-
-export { Layout };
+export { Layout } from './ui/Layout';

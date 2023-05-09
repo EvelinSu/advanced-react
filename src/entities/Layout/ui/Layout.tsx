@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { SLayout } from './styles';
-import { StyleContext } from 'app/providers/StyleProvider/lib/StyleContext';
+import { useTheme } from 'app/providers/StyleProvider';
 
 type PropsType = {
     children: React.ReactNode,
 }
 
 export const Layout = ({ children }: PropsType) => {
-    const { themeKey, setThemeKey } = useContext(StyleContext);
+    const { themeKey, setThemeKey } = useTheme();
 
     const toggleTheme = () => {
         setThemeKey(themeKey === 'default' ? 'light' : 'default');

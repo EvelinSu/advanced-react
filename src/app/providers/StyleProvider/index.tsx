@@ -1,3 +1,2 @@
-import { StyleProvider } from './ui/StyleProvider';
-
-export { StyleProvider };
+export { StyleProvider } from './ui/StyleProvider';
+export { useTheme } from './lib/useTheme';

@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { Layout } from 'entities/Layout';
-import { AboutPageLazy } from 'pages/AboutPage/AboutPage.lazy';
-import { MainPageLazy } from 'pages/MainPage/MainPage.lazy';
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
 import { StyleProvider } from 'app/providers/StyleProvider';
 
 export const App = () => {
@@ -14,8 +14,8 @@ export const App = () => {
                 <Link to={ '/about' }>About page</Link>
                 <Suspense fallback={ <div>Loading...</div> }>
                     <Routes>
-                        <Route path={ '/about' } element={ <AboutPageLazy /> } />
-                        <Route path={ '' } element={ <MainPageLazy /> } />
+                        <Route path={ '/about' } element={ <AboutPage /> } />
+                        <Route path={ '' } element={ <MainPage /> } />
                     </Routes>
                 </Suspense>
             </Layout>
