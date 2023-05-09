@@ -21,7 +21,7 @@ export const globalStyles = (theme: ThemeType) => css({
         fontFamily: theme.fonts.display,
         fontSize: theme.fontSizes.md,
         overflowX: 'hidden',
-        background: theme.palette.primary.main,
-        color: theme.palette.primary.contrast
+        background: theme.palette.paper.default,
+        color: theme.palette.paper.defaultContrast
     }
 });

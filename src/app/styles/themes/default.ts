@@ -1,8 +1,12 @@
 export const defaultTheme = {
     palette: {
         primary: {
-            main: '#161616',
+            main: 'rgba(46,50,79,0.65)',
             contrast: '#ffffff'
+        },
+        paper: {
+            default: '#202336',
+            defaultContrast: '#FFFFFF'
         }
     },
     spaces: {
