@@ -10,4 +10,7 @@ export const SNavbarWrapper = styled.nav(({ theme }) => ({
     width: '100%'
 }));
 
-export const SNavList = styled.div(({ theme }) => ({}));
+export const SNavList = styled.div(({ theme }) => ({
+    display: 'flex',
+    gap: theme.spaces['5']
+}));

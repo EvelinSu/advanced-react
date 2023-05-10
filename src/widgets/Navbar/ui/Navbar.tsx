@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
 import { SNavbarWrapper, SNavList } from './styles';
 import { useTheme } from 'app/providers/StyleProvider';
+import { AppLink } from 'shared/ui/AppLink';
 
 export const Navbar = () => {
     const { themeKey, setThemeKey } = useTheme();
@@ -13,8 +12,8 @@ export const Navbar = () => {
     return (
         <SNavbarWrapper>
             <SNavList>
-                <Link to={ '/' }>Main page</Link>
-                <Link to={ '/about' }>About page</Link>
+                <AppLink to={ '/' }>Main page</AppLink>
+                <AppLink to={ '/about' }>About page</AppLink>
             </SNavList>
             <button onClick={ toggleTheme }>Change theme</button>
         </SNavbarWrapper>
