@@ -23,5 +23,8 @@ export const globalStyles = (theme: ThemeType) => css({
         overflowX: 'hidden',
         background: theme.palette.paper.default,
         color: theme.palette.paper.defaultContrast
+    },
+    'button, input': {
+        border: 'none'
     }
 });

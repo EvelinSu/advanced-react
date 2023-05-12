@@ -1,6 +1,6 @@
 import { SNavbarWrapper, SNavList } from './styles';
 import { AppLink } from 'shared/ui/AppLink';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 
 export const Navbar = () => {
 

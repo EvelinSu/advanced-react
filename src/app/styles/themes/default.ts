@@ -2,7 +2,8 @@ export const defaultTheme = {
     palette: {
         primary: {
             main: 'rgba(46,50,79,0.65)',
-            contrast: '#ffffff'
+            contrast: '#ffffff',
+            mainHover100: 'rgba(255, 255, 255, 0.1)'
         },
         paper: {
             default: '#202336',
